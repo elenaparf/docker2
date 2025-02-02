@@ -85,16 +85,13 @@ docker rename elenaparf-nginx-t2 custom-nginx-t2
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
 
 # ответ 3
-![Скриншот 5](https://github.com/ysatii/hw4-docker/blob/main/img/docker5.jpg) 
+![1docker5](https://github.com/user-attachments/assets/94826777-faed-4560-8d90-2bf0d46828ac)
 Комбинация Ctrl-C передает контейнеру сигнал SIGINT, тем самым завершает его основной процесс и контейнер останавливается.  
 
-установим  nano 
-![Скриншот 6](https://github.com/ysatii/hw4-docker/blob/main/img/docker6.jpg) 
-
 изменим порт на 81 
-![Скриншот 7](https://github.com/ysatii/hw4-docker/blob/main/img/docker7.jpg) 
-![Скриншот 8](https://github.com/ysatii/hw4-docker/blob/main/img/docker8.jpg) 
-![Скриншот 9](https://github.com/ysatii/hw4-docker/blob/main/img/docker9.jpg) 
+![1docker7](https://github.com/user-attachments/assets/2bcdaf6b-1772-4d61-bf96-2789d9c15ac9)
+![1docker8](https://github.com/user-attachments/assets/b1e5934c-298e-4db3-ae20-e0a2719d69bd)
+![1docker9](https://github.com/user-attachments/assets/e554d83a-3684-44f1-a9f6-96b463546be1)
 
 контейнер по прежнему ведет проброс трафика на внутренний 80 порт! но он перестал отвечать. дальнейная работа не возможна нет порта который отвечает на веб запросы
 
@@ -116,8 +113,7 @@ docker rm -f custom-nginx-t2
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
 
 # ответ 4
-заппускаем два контейнера и проверяем что они в работе
-![Скриншот 10](https://github.com/ysatii/hw4-docker/blob/main/img/docker10.jpg) 
+запускаем два контейнера и проверяем? что они в работе
 
 ```sh
 docker run -d   --name centos-container   -v "$(pwd):/data"   centos tail -f /dev/null
@@ -145,7 +141,7 @@ cat "$(pwd)/file_on_host.txt"
 docker exec -it debian-container bash
 ls /data
 ```
-![Скриншот 11](https://github.com/ysatii/hw4-docker/blob/main/img/docker11.jpg) 
+![1docker11](https://github.com/user-attachments/assets/b4e999b3-2b37-4259-b7bb-5dfab813ae3b)
 
 
 ## Задача 5
@@ -198,9 +194,9 @@ services:
 # ответ 5
 1. По умолчанию путь к файлу Compose: compose.yaml (предпочтительный) или compose.yml. Compose также поддерживает docker-compose.yaml и docker-compose.yml для обеспечения обратной совместимости с более ранними версиями. Если в рабочем каталоге оба файла, Compose предпочитает compose.yaml.
 
-![Скриншот 12](https://github.com/ysatii/hw4-docker/blob/main/img/docker12.jpg) 
+![1docker12](https://github.com/user-attachments/assets/88c27d53-c57e-4cbe-a405-5d9d4155e9c4)
 
-2. Отредактируйте файл compose.yaml так, чтобы были запущенны оба файла
+2. Отредактируйте файл compose.yaml так, чтобы были запущены оба файла
 
 ```
 version: "3"
@@ -217,38 +213,37 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 ```
-![Скриншот 13](https://github.com/ysatii/hw4-docker/blob/main/img/docker13.jpg)   
+![1docker13](https://github.com/user-attachments/assets/73b5f1e2-7129-44d4-8359-41abe785a5a2)
 
-3. проверим какие образы имеються на хостовой машине
-![Скриншот 14](https://github.com/ysatii/hw4-docker/blob/main/img/docker14.jpg) 
+3. проверим, какие образы имеются на хостовой машине
+![1docker14](https://github.com/user-attachments/assets/04f87d04-e635-43a1-83dd-4c9028c120f7)
 
 переименуем образ 
 ```
 docker tag ysatii/custom-nginx:1.0.0 localhost:5000/custom-nginx:latest
 ```
 
-зальем и проверим его наличии в хранилище
+зальем и проверим его наличие в хранилище
 
 ```
 docker puch localhost:5000/custom-nginx:latest
 ```
-![Скриншот 15](https://github.com/ysatii/hw4-docker/blob/main/img/docker15.jpg) 
-
+![1docker15](https://github.com/user-attachments/assets/f96dc305-def3-408b-9416-5fcc6b253bef)
 
 4. Откроем страницу "https://127.0.0.1:9000" и произведем начальную настройку portainer.(логин и пароль адмнистратора)
-![Скриншот 16](https://github.com/ysatii/hw4-docker/blob/main/img/docker16.jpg)
-![Скриншот 17](https://github.com/ysatii/hw4-docker/blob/main/img/docker17.jpg)
-![Скриншот 18](https://github.com/ysatii/hw4-docker/blob/main/img/docker18.jpg)
-![Скриншот 19](https://github.com/ysatii/hw4-docker/blob/main/img/docker19.jpg)
+![1docker16](https://github.com/user-attachments/assets/df5f5d00-76b2-41f0-864d-758a7d7bb881)
+![1docker17](https://github.com/user-attachments/assets/b46c81eb-99bf-4b2f-b18e-a3606eaab8a9)
+![1docker18](https://github.com/user-attachments/assets/25e9d276-190a-4bce-a8e7-775878a2448b)
+![1docker19](https://github.com/user-attachments/assets/32f29e9c-3600-4780-99c7-c6cbca2b3824)
 
 5. Перейдем  на страницу "http://127.0.0.1:9000/#!/2/docker/containers", выберем контейнер с nginx и нажмем на кнопку "inspect". В представлении <> Tree развернем поле "Config" и сделаем скриншот от поля "AppArmorProfile" до "Driver".
-![Скриншот 20](https://github.com/ysatii/hw4-docker/blob/main/img/docker20.jpg)
-![Скриншот 21](https://github.com/ysatii/hw4-docker/blob/main/img/docker21.jpg)
-![Скриншот 22](https://github.com/ysatii/hw4-docker/blob/main/img/docker22.jpg)
+![1docker20](https://github.com/user-attachments/assets/01cbd447-31ed-43d7-a619-f03f36a33b67)
+![1docker21](https://github.com/user-attachments/assets/0f4e1926-d2dc-4224-9cc1-93441ee43927)
+![1docker22](https://github.com/user-attachments/assets/07544512-e1ed-48e3-8981-4b401d670396)
 
 6. Удалим любой из манифестов компоуза(например compose.yaml). Выполним команду "docker compose up -d". 
 Прочитайте warning, объясните суть предупреждения и выполните предложенное действие. Погасите compose-проект ОДНОЙ(обязательно!!) командой.
-![Скриншот 22](https://github.com/ysatii/hw4-docker/blob/main/img/docker22.jpg)
+![1docker22](https://github.com/user-attachments/assets/e58e09fa-e952-4dee-a169-3700654f4400)
 
 Found orphan containers ([task5-portainer-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up
 -  проблема в том что есть сироты т.е. контейнеры которые не описаны в манифесте 
