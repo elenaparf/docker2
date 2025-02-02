@@ -40,9 +40,9 @@ docker tag custom-nginx:1.0.0 ysatii/custom-nginx:1.0.0
 docker push ysatii/custom-nginx:1.0.0
 ```
 
-https://hub.docker.com/repository/docker/ysatii/custom-nginx/general
+https://hub.docker.com/repository/docker/elenaparf/custom-nginx/general
 
-https://hub.docker.com/repository/docker/ysatii/custom-nginx/tags/1.0.0/sha256-d0323f74b6af50bb16313c3d751152f61a9d81d2a6faae8cdda9d632db0dab91  
+https://hub.docker.com/repository/docker/elenaparf/custom-nginx/tags/1.0.0/sha256-d0323f74b6af50bb16313c3d751152f61a9d81d2a6faae8cdda9d632db0dab91  
 
 ссылка на [Dockerfile ](https://github.com/ysatii/hw4-docker/tree/main/1)
 
@@ -59,14 +59,14 @@ https://hub.docker.com/repository/docker/ysatii/custom-nginx/tags/1.0.0/sha256-d
 
 # Ответ 2
 ```sh
-docker run -d --name "melnik-ua-nginx-t2" -p 127.0.0.1:8080:80 custom-nginx:1.0.0
-docker rename melnik-ua-nginx-t2 custom-nginx-t2
+docker run -d --name "elenaparf-nginx-t2" -p 127.0.0.1:8080:80 custom-nginx:1.0.0
+docker rename elenaparf-nginx-t2 custom-nginx-t2
 ```
 
-![Скриншот 1](https://github.com/ysatii/hw4-docker/blob/main/img/docker1.jpg)  
-![Скриншот 2](https://github.com/ysatii/hw4-docker/blob/main/img/docker2.jpg) 
-![Скриншот 3](https://github.com/ysatii/hw4-docker/blob/main/img/docker3.jpg) 
-![Скриншот 4](https://github.com/ysatii/hw4-docker/blob/main/img/docker4.jpg) 
+![1docker1](https://github.com/user-attachments/assets/c85e2c58-4faa-4abd-b0ee-e858fdbc41c5)
+![1docker2](https://github.com/user-attachments/assets/d3564c33-6631-4005-bd07-b03327d05ca5)
+![1docker3](https://github.com/user-attachments/assets/dce6b2ba-79d8-4abd-a08a-04f97b29bf6b)
+![1docker4](https://github.com/user-attachments/assets/310e5d2b-b692-4dbe-bd88-ea11f1215567)
 
 ## Задача 3
 1. Воспользуйтесь docker help или google, чтобы узнать как подключиться к стандартному потоку ввода/вывода/ошибок контейнера "custom-nginx-t2".
